@@ -1,81 +1,154 @@
-// Memoria segura para evitar errores en navegadores restrictivos
+// Sistema de memoria seguro
 let memoryFallback = {};
 const safeStorage = {
     get: (key) => { try { return localStorage.getItem(key); } catch(e) { return memoryFallback[key] || null; } },
-    set: (key, val) => { try { localStorage.setItem(key, val); } catch(e) { memoryFallback[key] = val; } }
+    set: (key, val) => { try { localStorage.setItem(key, val); } catch(e) { memoryFallback[key] = val; } },
+    remove: (key) => { try { localStorage.removeItem(key); } catch(e) { delete memoryFallback[key]; } }
 };
 
-// Variables de estado
-let currentExam = [], examIdGlobal = "", qIndex = 0, answers = [];
+// Variables de Estado
+let activeCourseId = courseraDB[0].id_curso;
+let activeTab = 'view-exams';
+let currentExamData = [], examIdGlobal = "", qIndex = 0, answers = [];
 
-// Inicialización
 document.addEventListener('DOMContentLoaded', () => {
-    initTabs();
-    renderMainMenus();
+    initSettings();
+    initBottomNav();
+    renderCourseNav();
+    renderWorkspace();
 });
 
-function initTabs() {
+/* --- CONFIGURACIÓN Y MODAL --- */
+function initSettings() {
+    const modal = document.getElementById('settings-modal');
+    const btnOpen = document.getElementById('btn-settings');
+    const btnClose = document.getElementById('btn-close-settings');
+    const themeToggle = document.getElementById('theme-toggle');
+    const btnReset = document.getElementById('btn-reset');
+
+    // Recuperar tema
+    if (safeStorage.get('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
+    }
+
+    btnOpen.onclick = () => modal.classList.remove('hidden');
+    btnClose.onclick = () => modal.classList.add('hidden');
+    
+    themeToggle.onchange = () => {
+        if (themeToggle.checked) {
+            document.body.classList.add('dark-mode');
+            safeStorage.set('theme', 'dark');
+        } else {
+            document.body.classList.remove('dark-mode');
+            safeStorage.set('theme', 'light');
+        }
+    };
+
+    btnReset.onclick = () => {
+        if(confirm('¿Eliminar todos los registros de exámenes locales?')) {
+            safeStorage.remove('analitica_scores');
+            modal.classList.add('hidden');
+            renderWorkspace(); // Refresca las etiquetas
+        }
+    };
+}
+
+/* --- NAVEGACIÓN --- */
+function initBottomNav() {
     document.querySelectorAll('.nav-item').forEach(btn => {
         btn.addEventListener('click', () => {
-            const target = btn.getAttribute('data-view');
-            document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
-            document.getElementById(target).classList.remove('hidden');
+            activeTab = btn.getAttribute('data-view');
             document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
             btn.classList.add('active');
+            renderWorkspace();
         });
     });
 }
 
-function renderMainMenus() {
-    const examsContainer = document.getElementById('exams-accordion');
-    const summaryContainer = document.getElementById('summary-accordion');
-    let scores = JSON.parse(safeStorage.get('analitica_scores') || '{}');
-
+function renderCourseNav() {
+    const navContainer = document.getElementById('course-nav');
+    navContainer.innerHTML = '';
+    
     courseraDB.forEach((curso, index) => {
-        // Acordeón de Exámenes
-        const examItem = createAccordionItem(curso.titulo, renderExamList(curso, scores), index === 0);
-        examsContainer.appendChild(examItem);
-
-        // Acordeón de Resúmenes
-        const summaryItem = createAccordionItem(curso.titulo, curso.resumen_html, index === 0);
-        summaryContainer.appendChild(summaryItem);
+        const chip = document.createElement('div');
+        chip.className = `course-chip ${curso.id_curso === activeCourseId ? 'active' : ''}`;
+        chip.innerText = `C${index + 1}: ` + curso.titulo.split(':')[1].trim(); // Formato corto
+        chip.onclick = () => {
+            activeCourseId = curso.id_curso;
+            // Actualizar chips
+            document.querySelectorAll('.course-chip').forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            renderWorkspace();
+        };
+        navContainer.appendChild(chip);
     });
 }
 
-function createAccordionItem(title, content, isActive) {
-    const div = document.createElement('div');
-    div.className = `accordion-item ${isActive ? 'active' : ''}`;
-    div.innerHTML = `
-        <div class="accordion-header">
-            <span>${title}</span>
-            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M7 10l5 5 5-5z"/></svg>
-        </div>
-        <div class="accordion-content">${content}</div>
-    `;
-    div.querySelector('.accordion-header').onclick = () => div.classList.toggle('active');
-    return div;
+/* --- RENDERIZADO ÁREA DE TRABAJO --- */
+function renderWorkspace() {
+    // Ocultar todas las vistas
+    document.querySelectorAll('.workspace .view').forEach(v => v.classList.add('hidden'));
+    
+    // Mostrar la vista activa
+    document.getElementById(activeTab).classList.remove('hidden');
+    
+    const curso = courseraDB.find(c => c.id_curso === activeCourseId);
+    
+    if (activeTab === 'view-exams') {
+        document.getElementById('exams-title').innerText = curso.titulo;
+        renderExamsList(curso);
+    } else if (activeTab === 'view-summary') {
+        document.getElementById('summary-title').innerText = curso.titulo;
+        document.getElementById('summary-container').innerHTML = curso.resumen_html;
+    }
 }
 
-function renderExamList(curso, scores) {
-    if (curso.modulos.length === 0) return '<p class="text-muted">Próximamente...</p>';
-    let html = '';
+function renderExamsList(curso) {
+    const container = document.getElementById('exams-container');
+    container.innerHTML = '';
+    
+    let scores = JSON.parse(safeStorage.get('analitica_scores') || '{}');
+
+    if (curso.modulos.length === 0) {
+        container.innerHTML = '<p style="color:var(--text-muted); font-size:0.9rem;">Módulos en construcción...</p>';
+        return;
+    }
+
     curso.modulos.forEach(mod => {
-        html += `<p style="font-size:0.7rem; font-weight:800; color:var(--text-muted); margin-top:10px;">${mod.titulo.toUpperCase()}</p>`;
+        container.innerHTML += `<div class="module-title">${mod.titulo}</div>`;
+        
         mod.examenes.forEach(ex => {
-            const score = scores[ex.id] || 0;
-            html += `
-                <div class="exam-btn" onclick="startExam('${curso.id_curso}', '${ex.id}')" 
-                     style="padding:12px; background:var(--surface); border:1px solid var(--border); border-radius:8px; margin-top:5px; cursor:pointer;">
-                    <div style="display:flex; justify-content:space-between;">
-                        <span style="font-size:0.9rem; font-weight:600;">${ex.titulo}</span>
-                        ${score >= 80 ? `<span style="color:var(--success); font-weight:700;">${score}%</span>` : ''}
+            const score = scores[ex.id];
+            let statusClass = 'status-pending';
+            let badgeHtml = `<span class="status-badge badge-pending">Pendiente</span>`;
+            
+            // LÓGICA ESTRICTA: < 80 es Reprobado
+            if (score !== undefined) {
+                if (score >= 80) {
+                    statusClass = 'status-pass';
+                    badgeHtml = `<span class="status-badge badge-pass">${score}% Aprobado</span>`;
+                } else {
+                    statusClass = 'status-fail';
+                    badgeHtml = `<span class="status-badge badge-fail">${score}% Reprobado</span>`;
+                }
+            }
+
+            container.innerHTML += `
+                <div class="exam-card ${statusClass}" onclick="startExam('${curso.id_curso}', '${ex.id}')">
+                    <div class="exam-header">
+                        <span class="exam-name">${ex.titulo}</span>
+                        ${badgeHtml}
+                    </div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+                        ${ex.preguntas.length} Preguntas
                     </div>
                 </div>`;
         });
     });
-    return html;
 }
 
+/* --- MOTOR DE EXAMEN --- */
 function startExam(cursoId, examId) {
     const curso = courseraDB.find(c => c.id_curso === cursoId);
     let examObj;
@@ -85,22 +158,29 @@ function startExam(cursoId, examId) {
     });
 
     examIdGlobal = examId;
-    currentExam = [...examObj.preguntas].sort(() => Math.random() - 0.5);
+    currentExamData = [...examObj.preguntas].sort(() => Math.random() - 0.5);
     qIndex = 0;
-    answers = Array(currentExam.length).fill(null);
+    answers = Array(currentExamData.length).fill(null);
 
-    showView('view-quiz');
+    // Ocultar navegaciones
+    document.getElementById('course-nav').classList.add('hidden');
+    document.getElementById('bottom-nav').classList.add('hidden');
+    
+    document.querySelectorAll('.workspace .view').forEach(v => v.classList.add('hidden'));
+    document.getElementById('view-quiz').classList.remove('hidden');
+    
     renderQuestion();
 }
 
 function renderQuestion() {
-    const q = currentExam[qIndex];
-    document.getElementById('q-counter').innerText = `${qIndex + 1} de ${currentExam.length}`;
-    document.getElementById('progress-fill').style.width = `${((qIndex) / currentExam.length) * 100}%`;
+    const q = currentExamData[qIndex];
+    document.getElementById('q-counter').innerText = `${qIndex + 1}/${currentExamData.length}`;
+    document.getElementById('progress-fill').style.width = `${((qIndex) / currentExamData.length) * 100}%`;
     document.getElementById('q-text').innerText = q.pregunta;
 
     const container = document.getElementById('options-container');
     container.innerHTML = '';
+    
     q.opciones.forEach(opt => {
         const btn = document.createElement('div');
         btn.className = `option-item ${answers[qIndex] === opt ? 'selected' : ''}`;
@@ -112,7 +192,7 @@ function renderQuestion() {
 
 document.getElementById('btn-next').onclick = () => {
     if (!answers[qIndex]) return;
-    if (qIndex < currentExam.length - 1) {
+    if (qIndex < currentExamData.length - 1) {
         qIndex++;
         renderQuestion();
     } else {
@@ -121,38 +201,53 @@ document.getElementById('btn-next').onclick = () => {
 };
 
 function showResults() {
-    showView('view-results');
+    document.getElementById('view-quiz').classList.add('hidden');
+    document.getElementById('view-results').classList.remove('hidden');
+    
     let correctas = 0;
     const fb = document.getElementById('feedback-container');
     fb.innerHTML = '';
 
-    currentExam.forEach((q, i) => {
+    currentExamData.forEach((q, i) => {
         const isOk = answers[i].esCorrecta;
         if (isOk) correctas++;
         fb.innerHTML += `
             <div class="feedback-card ${isOk ? 'correct' : 'incorrect'}">
-                <p><strong>${i+1}. ${q.pregunta}</strong></p>
-                <p style="color:${isOk?'var(--success)':'var(--error)'}">${isOk?'✓':'✗'} ${answers[i].texto}</p>
-                <div class="hint-box">${q.explicacion}</div>
+                <p style="font-size:0.95rem; font-weight:700; margin-bottom:8px;">${i+1}. ${q.pregunta}</p>
+                <p style="font-size:0.85rem; font-weight:600; color: ${isOk ? 'var(--success)' : 'var(--error)'}">
+                    ${isOk ? '✓' : '✗'} Tu respuesta: ${answers[i].texto}
+                </p>
+                <div class="hint-box"><b>Nota Técnica:</b> ${q.explicacion}</div>
             </div>`;
     });
 
-    const score = Math.round((correctas / currentExam.length) * 100);
-    document.getElementById('result-score').innerText = score + '%';
-    document.getElementById('result-status').innerText = score >= 80 ? '¡APROBADO!' : 'REPROBADO';
+    const score = Math.round((correctas / currentExamData.length) * 100);
+    const scoreDiv = document.getElementById('result-score');
+    const statusDiv = document.getElementById('result-status');
+    
+    scoreDiv.innerText = score + '%';
     
     if (score >= 80) {
-        let scores = JSON.parse(safeStorage.get('analitica_scores') || '{}');
+        scoreDiv.className = 'score-badge pass-text';
+        statusDiv.className = 'pass-text';
+        statusDiv.innerText = 'APROBADO';
+    } else {
+        scoreDiv.className = 'score-badge fail-text';
+        statusDiv.className = 'fail-text';
+        statusDiv.innerText = 'REPROBADO';
+    }
+    
+    // Guardar nota localmente siempre (sea aprobada o reprobada) para mantener historial
+    let scores = JSON.parse(safeStorage.get('analitica_scores') || '{}');
+    if (!scores[examIdGlobal] || score > scores[examIdGlobal] || scores[examIdGlobal] < 80) {
         scores[examIdGlobal] = score;
         safeStorage.set('analitica_scores', JSON.stringify(scores));
     }
 }
 
 document.getElementById('btn-finish').onclick = () => {
-    location.reload(); // Recarga limpia para actualizar puntajes
+    // Restaurar navegaciones
+    document.getElementById('course-nav').classList.remove('hidden');
+    document.getElementById('bottom-nav').classList.remove('hidden');
+    renderWorkspace();
 };
-
-function showView(id) {
-    document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
-    document.getElementById(id).classList.remove('hidden');
-}
