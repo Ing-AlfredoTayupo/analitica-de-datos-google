@@ -142,3 +142,61 @@ body {
 .nav-item svg { width: 24px; height: 24px; fill: currentColor; }
 
 .hidden { display: none; }
+
+/* === VISTA DE EXAMEN Y PREGUNTAS === */
+.quiz-header { display: flex; justify-content: space-between; font-weight: 600; color: var(--text-muted); margin-bottom: 10px; }
+.progress-container { background: var(--border); height: 6px; border-radius: 3px; margin-bottom: 24px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--primary); width: 0%; transition: 0.3s ease-out; }
+.question-text { font-size: 1.15rem; font-weight: 700; margin-bottom: 20px; color: var(--text-dark); }
+
+.options-grid { display: flex; flex-direction: column; gap: 12px; }
+.option-item {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+.option-item:hover { border-color: var(--text-muted); }
+.option-item.selected { border-color: var(--primary); background: var(--primary-light); }
+
+/* Círculo simulado para el botón de selección */
+.option-item::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--text-muted);
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+.option-item.selected::before {
+    border-color: var(--primary);
+    background: radial-gradient(circle, var(--primary) 40%, transparent 45%);
+}
+
+/* === RESULTADOS Y FEEDBACK === */
+.result-card { text-align: center; margin-bottom: 24px; padding: 20px 0; }
+.score-badge { font-size: 4rem; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 5px; }
+#result-status { font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+.feedback-card {
+    background: var(--surface);
+    border-left: 4px solid var(--border);
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+.feedback-card.correct { border-left-color: var(--success); }
+.feedback-card.incorrect { border-left-color: var(--error); }
+.hint-box { background: var(--bg-app); padding: 12px; border-radius: 8px; font-size: 0.85rem; color: var(--text-muted); margin-top: 10px; border: 1px solid var(--border); }
+
+
