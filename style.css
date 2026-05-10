@@ -75,7 +75,21 @@ body { background-color: var(--bg-app); color: var(--text-dark); font-family: 'I
 
 /* ÁREA DE TRABAJO */
 .workspace { padding: 24px 20px; flex-grow: 1; background: var(--bg-app); }
-.section-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 20px; color: var(--text-dark); }
+.section-title { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    font-size: 1.2rem; 
+    font-weight: 800; 
+    margin-bottom: 20px; 
+    color: var(--text-dark); 
+}
+.section-title svg { 
+    color: var(--primary); 
+    flex-shrink: 0; 
+    transition: color 0.3s; 
+}
+
 .module-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin: 25px 0 12px 5px; font-weight: 900; }
 
 /* TARJETAS DE EXAMEN */
@@ -107,10 +121,11 @@ body { background-color: var(--bg-app); color: var(--text-dark); font-family: 'I
 .option-item.selected::before { border-color: var(--primary); background: radial-gradient(circle, var(--primary) 40%, transparent 45%); }
 
 /* NUEVA BOTONERA DEL EXAMEN */
-.quiz-actions { display: flex; gap: 12px; margin-top: 24px; }
+.quiz-actions POR ESTA: */
+.quiz-actions { display: flex; gap: 12px; margin-top: 24px; align-items: center; }
 .quiz-actions .btn-primary { flex: 2; margin-top: 0; }
-.quiz-actions .btn-danger { flex: 1; margin-top: 0; display: flex; justify-content: center; align-items: center; border: 2px solid var(--error); background: transparent; }
-.quiz-actions .btn-danger:active { background: rgba(239,68,68,0.1); transform: scale(0.98); }
+.btn-ghost { flex: 1; background: transparent; color: var(--text-muted); border: none; font-size: 0.85rem; font-weight: 800; cursor: pointer; padding: 14px; text-transform: uppercase; transition: 0.2s; border-radius: 12px; }
+.btn-ghost:active { background: var(--border); color: var(--text-dark); }
 
 /* RESULTADOS */
 .result-card { text-align: center; margin-bottom: 24px; padding: 30px 20px; background: var(--surface); border-radius: var(--radius-card); border: 1px solid var(--border); box-shadow: 0 10px 25px rgba(0,0,0,0.02); }

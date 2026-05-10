@@ -105,54 +105,17 @@ function renderWorkspace() {
     
     const curso = courseraDB.find(c => c.id_curso === activeCourseId);
     
+    // Íconos vectoriales para inyección dinámica
+    const iconTheory = `<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>`;
+    const iconEval = `<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8.5 13.5l-3.5-3.5 1.41-1.41L10.5 13.67l5.59-5.59L17.5 9.5l-7 7z"/></svg>`;
+    
     if (activeTab === 'view-exams') {
-        document.getElementById('exams-title').innerText = curso.titulo;
+        document.getElementById('exams-title').innerHTML = `${iconEval} <span>${curso.titulo}</span>`;
         renderExamsList(curso);
     } else if (activeTab === 'view-summary') {
-        document.getElementById('summary-title').innerText = curso.titulo;
+        document.getElementById('summary-title').innerHTML = `${iconTheory} <span>${curso.titulo}</span>`;
         document.getElementById('summary-container').innerHTML = curso.resumen_html;
     }
-}
-
-function renderExamsList(curso) {
-    const container = document.getElementById('exams-container');
-    container.innerHTML = '';
-    let scores = JSON.parse(safeStorage.get('analitica_scores') || '{}');
-
-    if (curso.modulos.length === 0) {
-        container.innerHTML = '<p style="color:var(--text-muted); font-size:0.9rem;">Módulos en construcción...</p>';
-        return;
-    }
-
-    curso.modulos.forEach(mod => {
-        container.innerHTML += `<div class="module-title">${mod.titulo}</div>`;
-        mod.examenes.forEach(ex => {
-            const score = scores[ex.id];
-            let statusClass = 'status-pending';
-            let badgeHtml = `<span class="status-badge badge-pending">Pendiente</span>`;
-            
-            if (score !== undefined) {
-                if (score >= 80) {
-                    statusClass = 'status-pass';
-                    badgeHtml = `<span class="status-badge badge-pass">${score}% Aprobado</span>`;
-                } else {
-                    statusClass = 'status-fail';
-                    badgeHtml = `<span class="status-badge badge-fail">${score}% Reprobado</span>`;
-                }
-            }
-
-            container.innerHTML += `
-                <div class="exam-card ${statusClass}" onclick="startExam('${curso.id_curso}', '${ex.id}')">
-                    <div class="exam-header">
-                        <span class="exam-name">${ex.titulo}</span>
-                        ${badgeHtml}
-                    </div>
-                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
-                        ${ex.preguntas.length} Preguntas
-                    </div>
-                </div>`;
-        });
-    });
 }
 
 /* --- MOTOR DE EXAMEN --- */
