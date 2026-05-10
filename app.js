@@ -1,4 +1,3 @@
-// Sistema de memoria seguro
 let memoryFallback = {};
 const safeStorage = {
     get: (key) => { try { return localStorage.getItem(key); } catch(e) { return memoryFallback[key] || null; } },
@@ -6,7 +5,6 @@ const safeStorage = {
     remove: (key) => { try { localStorage.removeItem(key); } catch(e) { delete memoryFallback[key]; } }
 };
 
-// Variables de Estado
 let activeCourseId = courseraDB[0].id_curso;
 let activeTab = 'view-exams';
 let currentExamData = [], examIdGlobal = "", qIndex = 0, answers = [];
@@ -26,7 +24,6 @@ function initSettings() {
     const themeToggle = document.getElementById('theme-toggle');
     const btnReset = document.getElementById('btn-reset');
 
-    // Recuperar tema
     if (safeStorage.get('theme') === 'dark') {
         document.body.classList.add('dark-mode');
         themeToggle.checked = true;
@@ -49,19 +46,33 @@ function initSettings() {
         if(confirm('¿Eliminar todos los registros de exámenes locales?')) {
             safeStorage.remove('analitica_scores');
             modal.classList.add('hidden');
-            renderWorkspace(); // Refresca las etiquetas
+            renderWorkspace();
         }
     };
 }
 
-/* --- NAVEGACIÓN --- */
+/* --- NAVEGACIÓN INFERIOR Y SINCRONIZACIÓN DE TEMAS --- */
 function initBottomNav() {
     document.querySelectorAll('.nav-item').forEach(btn => {
         btn.addEventListener('click', () => {
             activeTab = btn.getAttribute('data-view');
             document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
             btn.classList.add('active');
+
+            // Cambio de color temático dinámico
+            if (activeTab === 'view-summary') {
+                document.body.classList.add('theme-theory');
+            } else {
+                document.body.classList.remove('theme-theory');
+            }
+
             renderWorkspace();
+
+            // Auto-scroll para sincronizar la visibilidad del botón de arriba
+            setTimeout(() => {
+                const activeChip = document.querySelector('.course-chip.active');
+                if (activeChip) activeChip.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }, 50);
         });
     });
 }
@@ -73,12 +84,14 @@ function renderCourseNav() {
     courseraDB.forEach((curso, index) => {
         const chip = document.createElement('div');
         chip.className = `course-chip ${curso.id_curso === activeCourseId ? 'active' : ''}`;
-        chip.innerText = `C${index + 1}: ` + curso.titulo.split(':')[1].trim(); // Formato corto
+        chip.innerText = `C${index + 1}: ` + curso.titulo.split(':')[1].trim();
         chip.onclick = () => {
             activeCourseId = curso.id_curso;
-            // Actualizar chips
             document.querySelectorAll('.course-chip').forEach(c => c.classList.remove('active'));
             chip.classList.add('active');
+            
+            // Auto-scroll al seleccionar para mantenerlo visible
+            chip.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             renderWorkspace();
         };
         navContainer.appendChild(chip);
@@ -87,10 +100,7 @@ function renderCourseNav() {
 
 /* --- RENDERIZADO ÁREA DE TRABAJO --- */
 function renderWorkspace() {
-    // Ocultar todas las vistas
     document.querySelectorAll('.workspace .view').forEach(v => v.classList.add('hidden'));
-    
-    // Mostrar la vista activa
     document.getElementById(activeTab).classList.remove('hidden');
     
     const curso = courseraDB.find(c => c.id_curso === activeCourseId);
@@ -107,7 +117,6 @@ function renderWorkspace() {
 function renderExamsList(curso) {
     const container = document.getElementById('exams-container');
     container.innerHTML = '';
-    
     let scores = JSON.parse(safeStorage.get('analitica_scores') || '{}');
 
     if (curso.modulos.length === 0) {
@@ -117,13 +126,11 @@ function renderExamsList(curso) {
 
     curso.modulos.forEach(mod => {
         container.innerHTML += `<div class="module-title">${mod.titulo}</div>`;
-        
         mod.examenes.forEach(ex => {
             const score = scores[ex.id];
             let statusClass = 'status-pending';
             let badgeHtml = `<span class="status-badge badge-pending">Pendiente</span>`;
             
-            // LÓGICA ESTRICTA: < 80 es Reprobado
             if (score !== undefined) {
                 if (score >= 80) {
                     statusClass = 'status-pass';
@@ -162,7 +169,6 @@ function startExam(cursoId, examId) {
     qIndex = 0;
     answers = Array(currentExamData.length).fill(null);
 
-    // Ocultar navegaciones
     document.getElementById('course-nav').classList.add('hidden');
     document.getElementById('bottom-nav').classList.add('hidden');
     
@@ -197,6 +203,16 @@ document.getElementById('btn-next').onclick = () => {
         renderQuestion();
     } else {
         showResults();
+    }
+};
+
+// BOTÓN ABANDONAR
+document.getElementById('btn-quit').onclick = () => {
+    if(confirm('¿Seguro que deseas abandonar la prueba? Tu progreso no se guardará.')) {
+        document.getElementById('view-quiz').classList.add('hidden');
+        document.getElementById('course-nav').classList.remove('hidden');
+        document.getElementById('bottom-nav').classList.remove('hidden');
+        renderWorkspace();
     }
 };
 
@@ -237,7 +253,6 @@ function showResults() {
         statusDiv.innerText = 'REPROBADO';
     }
     
-    // Guardar nota localmente siempre (sea aprobada o reprobada) para mantener historial
     let scores = JSON.parse(safeStorage.get('analitica_scores') || '{}');
     if (!scores[examIdGlobal] || score > scores[examIdGlobal] || scores[examIdGlobal] < 80) {
         scores[examIdGlobal] = score;
@@ -246,7 +261,7 @@ function showResults() {
 }
 
 document.getElementById('btn-finish').onclick = () => {
-    // Restaurar navegaciones
+    document.getElementById('view-results').classList.add('hidden');
     document.getElementById('course-nav').classList.remove('hidden');
     document.getElementById('bottom-nav').classList.remove('hidden');
     renderWorkspace();

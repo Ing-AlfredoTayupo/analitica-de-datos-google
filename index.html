@@ -53,7 +53,7 @@
             <div id="summary-container" class="theory-content"></div>
         </section>
 
-        <section id="view-quiz" class="view hidden">
+              <section id="view-quiz" class="view hidden">
             <div class="quiz-header">
                 <span id="quiz-title" class="truncate">Prueba</span>
                 <span id="q-counter" class="badge">0/0</span>
@@ -61,8 +61,13 @@
             <div class="progress-container"><div id="progress-fill" class="progress-fill"></div></div>
             <div id="q-text" class="question-text"></div>
             <div id="options-container" class="options-grid"></div>
-            <button id="btn-next" class="btn-primary">Siguiente</button>
+            
+            <div class="quiz-actions">
+                <button id="btn-quit" class="btn-danger">Abandonar</button>
+                <button id="btn-next" class="btn-primary">Siguiente</button>
+            </div>
         </section>
+
 
         <section id="view-results" class="view hidden">
             <div class="result-card">
