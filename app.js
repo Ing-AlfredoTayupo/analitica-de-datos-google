@@ -5,16 +5,21 @@ const safeStorage = {
     remove: (key) => { try { localStorage.removeItem(key); } catch(e) { delete memoryFallback[key]; } }
 };
 
+// ESTADO INICIAL: Ahora apunta a Teoría
 let activeCourseId = courseraDB[0].id_curso;
-let activeTab = 'view-exams';
+let activeTab = 'view-summary'; 
 let currentExamData = [], examIdGlobal = "", qIndex = 0, answers = [];
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Forzamos el tema de teoría al cargar
+    document.body.classList.add('theme-theory');
+    
     initSettings();
     initBottomNav();
     renderCourseNav();
     renderWorkspace();
 });
+
 
 /* --- CONFIGURACIÓN Y MODAL --- */
 function initSettings() {
