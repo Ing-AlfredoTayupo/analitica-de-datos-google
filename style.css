@@ -179,3 +179,14 @@ body { background-color: var(--bg-app); color: var(--text-dark); font-family: 'I
 #btn-settings {
     animation: gear-intro 1s ease-out;
 }
+
+
+.exam-card, .question-card {
+    border-radius: 18px;
+    backdrop-filter: blur(4px);
+}
+
+.question-card:hover {
+    transform: translateY(-2px);
+    transition: 0.2s ease;
+}

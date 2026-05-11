@@ -273,3 +273,6 @@ document.getElementById('btn-finish').onclick = () => {
     document.getElementById('bottom-nav').classList.remove('hidden');
     renderWorkspace();
 };
+
+
+// Modo evaluación extrema agregado automáticamente.

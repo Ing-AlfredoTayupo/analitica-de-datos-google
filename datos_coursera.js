@@ -67,8 +67,116 @@ const courseraDB = [
                                     { "texto": "Visualización de datos", "esCorrecta": false }
                                 ],
                                 "explicacion": "La estrategia de datos es la visión macro que asegura que las personas y las herramientas trabajen juntas eficientemente."
-                            }
-                        ]
+                            },
+
+{
+    "id": "c1_m1_ex_dios",
+    "titulo": "Evaluación Extrema: Fundamentos Analíticos Nivel Dios",
+    "preguntas": [
+        {
+            "pregunta": "Una empresa de delivery detecta una caída del 18% en tres ciudades. El director afirma que la competencia es la causa y propone despedir supervisores. ¿Cuál sería la mejor primera acción de un analista de datos?",
+            "opciones": [
+                { "texto": "Recomendar despidos inmediatos para reducir costos antes de que empeore la situación.", "esCorrecta": false },
+                { "texto": "Analizar datos de entregas, clima, promociones, reseñas y comportamiento regional antes de sacar conclusiones.", "esCorrecta": true },
+                { "texto": "Comparar únicamente las ventas con el mismo mes del año pasado.", "esCorrecta": false },
+                { "texto": "Validar la hipótesis del director para acelerar la toma de decisiones.", "esCorrecta": false }
+            ],
+            "explicacion": "Un analista debe validar hipótesis usando múltiples variables antes de concluir causalidad."
+        },
+        {
+            "pregunta": "¿Qué escenario representa mejor datos estructurados?",
+            "opciones": [
+                { "texto": "Grabaciones de llamadas y fotografías de seguridad.", "esCorrecta": false },
+                { "texto": "Datos organizados en tablas SQL con filas y columnas definidas.", "esCorrecta": true },
+                { "texto": "Comentarios de redes sociales escritos libremente.", "esCorrecta": false },
+                { "texto": "Archivos PDF con contratos escaneados.", "esCorrecta": false }
+            ],
+            "explicacion": "Los datos estructurados poseen un esquema definido y son fácilmente consultables."
+        },
+        {
+            "pregunta": "Una tienda online descubre que usuarios que compran audífonos suelen comprar teclados mecánicos. ¿Qué habilidad analítica se está aplicando?",
+            "opciones": [
+                { "texto": "Visualización avanzada", "esCorrecta": false },
+                { "texto": "Descubrimiento de relaciones", "esCorrecta": true },
+                { "texto": "Limpieza de datos", "esCorrecta": false },
+                { "texto": "Gobernanza de datos", "esCorrecta": false }
+            ],
+            "explicacion": "Se está detectando una relación entre patrones de compra."
+        },
+        {
+            "pregunta": "¿Cuál es la diferencia principal entre el ciclo de vida de los datos y el proceso de análisis de Google?",
+            "opciones": [
+                { "texto": "El proceso de Google se enfoca en la toma de decisiones; el ciclo de vida gestiona los datos desde su creación hasta destrucción.", "esCorrecta": true },
+                { "texto": "Ambos conceptos significan exactamente lo mismo.", "esCorrecta": false },
+                { "texto": "El ciclo de vida solo aplica a empresas pequeñas.", "esCorrecta": false },
+                { "texto": "El proceso de Google reemplaza completamente el ciclo de vida.", "esCorrecta": false }
+            ],
+            "explicacion": "Son conceptos relacionados pero con enfoques distintos."
+        },
+        {
+            "pregunta": "Un analista usa la técnica de los 5 porqués. ¿Cuál es el objetivo real de esta técnica?",
+            "opciones": [
+                { "texto": "Encontrar rápidamente un culpable.", "esCorrecta": false },
+                { "texto": "Identificar la causa raíz de un problema.", "esCorrecta": true },
+                { "texto": "Reducir el tamaño de las bases de datos.", "esCorrecta": false },
+                { "texto": "Eliminar datos duplicados.", "esCorrecta": false }
+            ],
+            "explicacion": "La técnica busca profundizar hasta encontrar el origen del problema."
+        },
+        {
+            "pregunta": "¿Qué situación demuestra pensamiento estructurado?",
+            "opciones": [
+                { "texto": "Tomar decisiones basadas únicamente en intuición.", "esCorrecta": false },
+                { "texto": "Dividir un problema complejo en partes organizadas y analizables.", "esCorrecta": true },
+                { "texto": "Ignorar variables externas para ahorrar tiempo.", "esCorrecta": false },
+                { "texto": "Elegir la primera hipótesis que parezca lógica.", "esCorrecta": false }
+            ],
+            "explicacion": "El pensamiento estructurado organiza información y problemas de manera lógica."
+        },
+        {
+            "pregunta": "¿Cuál es la principal ventaja de SQL frente a hojas de cálculo tradicionales?",
+            "opciones": [
+                { "texto": "Permite gestionar grandes volúmenes de datos de forma eficiente.", "esCorrecta": true },
+                { "texto": "Puede reemplazar completamente cualquier software empresarial.", "esCorrecta": false },
+                { "texto": "Convierte automáticamente datos no estructurados en gráficos.", "esCorrecta": false },
+                { "texto": "Elimina la necesidad de limpiar datos.", "esCorrecta": false }
+            ],
+            "explicacion": "SQL destaca por manejar conjuntos de datos masivos y consultas complejas."
+        },
+        {
+            "pregunta": "Una empresa posee transacciones SQL, comentarios de clientes en texto libre y videos de seguridad. ¿Qué conjunto corresponde a datos no estructurados?",
+            "opciones": [
+                { "texto": "SQL y CSV", "esCorrecta": false },
+                { "texto": "Comentarios y videos", "esCorrecta": true },
+                { "texto": "Solo SQL", "esCorrecta": false },
+                { "texto": "Todos son estructurados", "esCorrecta": false }
+            ],
+            "explicacion": "Texto libre y video carecen de un esquema rígido."
+        },
+        {
+            "pregunta": "¿Cuál es la función principal de la visualización de datos?",
+            "opciones": [
+                { "texto": "Ocultar tendencias complejas.", "esCorrecta": false },
+                { "texto": "Representar datos de manera comprensible para identificar patrones y comunicar hallazgos.", "esCorrecta": true },
+                { "texto": "Reemplazar completamente el análisis estadístico.", "esCorrecta": false },
+                { "texto": "Eliminar errores automáticamente.", "esCorrecta": false }
+            ],
+            "explicacion": "La visualización facilita interpretar y comunicar información."
+        },
+        {
+            "pregunta": "Un analista ignora datos contradictorios porque no coinciden con la teoría del gerente. ¿Qué error está cometiendo?",
+            "opciones": [
+                { "texto": "Pensamiento estructurado.", "esCorrecta": false },
+                { "texto": "Sesgo de confirmación.", "esCorrecta": true },
+                { "texto": "Normalización de datos.", "esCorrecta": false },
+                { "texto": "Gobernanza analítica.", "esCorrecta": false }
+            ],
+            "explicacion": "El sesgo de confirmación ocurre cuando solo se aceptan datos que apoyan una idea previa."
+        }
+    ]
+}
+
+]
                     }
                 ]
             },
