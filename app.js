@@ -276,3 +276,1771 @@ document.getElementById('btn-finish').onclick = () => {
 
 
 // Modo evaluación extrema agregado automáticamente.
+
+
+const evaluacionHardcoreMega = {
+  "id": "curso1_hardcore_mega",
+  "titulo": "Curso 1 Hardcore Mega Evaluación",
+  "preguntas": [
+    {
+      "pregunta": "Una ecommerce detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "Una plataforma streaming detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "Una empresa financiera detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "Una empresa delivery detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "Una ecommerce detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "Una ecommerce detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "Una red social detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "Una empresa financiera detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "Una red social detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "Una empresa delivery detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de datos no estructurados?",
+      "opciones": [
+        {
+          "texto": "Videos y comentarios en texto libre",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tablas SQL perfectamente organizadas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Archivos CSV con columnas definidas",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Bases de datos relacionales",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Los datos no estructurados no siguen un esquema rígido."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el pensamiento estructurado?",
+      "opciones": [
+        {
+          "texto": "Dividir problemas complejos en partes analizables",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Tomar decisiones rápidas sin contexto",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Usar únicamente intuición",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar variables secundarias",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento estructurado organiza el análisis."
+    },
+    {
+      "pregunta": "Una empresa financiera detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "Una ecommerce detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "¿Qué diferencia mejor a correlación y causalidad?",
+      "opciones": [
+        {
+          "texto": "La correlación indica relación; la causalidad implica causa directa",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Son exactamente iguales",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La causalidad nunca usa datos",
+          "esCorrecta": false
+        },
+        {
+          "texto": "La correlación prueba automáticamente una causa",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "Relacionar variables no significa demostrar causa."
+    },
+    {
+      "pregunta": "Una empresa logística detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    },
+    {
+      "pregunta": "Una red social detecta una caída de ventas y el gerente culpa inmediatamente a la competencia. ¿Qué debe hacer primero un analista de datos?",
+      "opciones": [
+        {
+          "texto": "Validar la hipótesis usando múltiples fuentes de datos",
+          "esCorrecta": true
+        },
+        {
+          "texto": "Confirmar la hipótesis del gerente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Reducir personal inmediatamente",
+          "esCorrecta": false
+        },
+        {
+          "texto": "Ignorar datos históricos",
+          "esCorrecta": false
+        }
+      ],
+      "explicacion": "El pensamiento analítico requiere validar hipótesis antes de concluir."
+    }
+  ]
+};
